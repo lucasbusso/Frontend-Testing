@@ -37,10 +37,10 @@ test('checkbox functionality', () => {
   const colorButton = screen.getByRole('button');  
   
   fireEvent.click(checkbox);
-  expect(colorButton).not.toBeEnabled();
+  expect(colorButton).toBeDisabled();
 
   fireEvent.click(checkbox);
-  expect(colorButton).not.toBeDisabled();
+  expect(colorButton).toBeEnabled();
 });
 
 test('checkbox color functionality', () => {
